@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2019 10:47:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.SongCatalog" table="song_catalog" catalog="songrecognition" optimistic-lock="version">
+        <id name="songId" type="java.lang.Integer">
+            <column name="song_id" />
+            <generator class="identity" />
+        </id>
+        <property name="songTitle" type="string">
+            <column name="song_title" length="300" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

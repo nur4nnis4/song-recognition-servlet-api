@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 26, 2019 10:47:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="models.SongFingerprints" table="song_fingerprints" catalog="songrecognition" optimistic-lock="version">
+        <id name="no" type="string">
+            <column name="no" length="36" />
+            <generator class="assigned" />
+        </id>
+        <property name="hash" type="string">
+            <column name="hash" length="9" not-null="true" />
+        </property>
+        <property name="value" type="string">
+            <column name="value" length="12" not-null="true" />
+        </property>
+        <property name="songId" type="int">
+            <column name="song_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
